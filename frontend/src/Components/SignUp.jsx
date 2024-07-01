@@ -21,7 +21,7 @@ const handleNameChange=(e)=>{
         }
 const signup=async()=>{
     try {
-        const response = await axios.post("http://localhost:4000/voter/signup", {
+        const response = await axios.post("https://onevote-backend.onrender.com/voter/signup", {
           name: name,
           email: email,
           password: password

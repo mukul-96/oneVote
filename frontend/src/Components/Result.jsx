@@ -11,7 +11,7 @@ const Result = ({resetTrigger}) => {
     const token = localStorage.getItem("authorization");
     const fetchData = async () => {
         try {
-            const res = await axios.get("http://localhost:4000/admin/results", {
+            const res = await axios.get("https://onevote-backend.onrender.com/admin/results", {
                 headers: { Authorization: token ? token : "" }
             });
             const fetchedData = res.data;

@@ -12,7 +12,7 @@ const VoterStatsChart = ({resetTrigger}) => {
     const fetchStats = async () => {
         try {
             const token = localStorage.getItem("authorization");
-            const response = await axios.get("http://localhost:4000/admin/stats", {
+            const response = await axios.get("https://onevote-backend.onrender.com/admin/stats", {
                 headers: {
                     Authorization: token ? token : " "
                 }

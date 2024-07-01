@@ -32,7 +32,7 @@ const AdminPanel = () => {
     const addParty = async () => {
         try {
             if (partyName !== '' && imageUrl !== '') {
-                await axios.post("http://localhost:4000/admin/party/add", {
+                await axios.post("https://onevote-backend.onrender.com/admin/party/add", {
                     name: partyName,
                     img: imageUrl
                 }, {
@@ -55,7 +55,7 @@ const AdminPanel = () => {
         
     const deleteParty = async (name) => {
         try {
-            await axios.delete(`http://localhost:4000/admin/party/delete/${name}`, {
+            await axios.delete(`https://onevote-backend.onrender.com/admin/party/delete/${name}`, {
                 headers: {
                     Authorization: token ? token : " "
                 }
@@ -70,7 +70,7 @@ const AdminPanel = () => {
 
     const reset = async () => {
         try {
-            await axios.put("http://localhost:4000/admin/reset", {}, {
+            await axios.put("https://onevote-backend.onrender.com/admin/reset", {}, {
                 headers: {
                     Authorization: token ? token : ""
                 }
@@ -86,7 +86,7 @@ const AdminPanel = () => {
 
     const getData = async () => {
         try {
-            const response = await axios.get("http://localhost:4000/voter/getList");
+            const response = await axios.get("https://onevote-backend.onrender.com/voter/getList");
             setParty(response.data || []);
         } catch (error) {
             toast.error("Error fetching party list");

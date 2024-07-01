@@ -11,7 +11,7 @@ const Voting = () => {
     useEffect(() => {
         const getCandidates = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/voter/getList');
+                const response = await axios.get('https://onevote-backend.onrender.com/voter/getList');
                 setCandidates(response.data || []);
             } catch (error) {
                 toast.error("Error fetching candidates");
@@ -28,7 +28,7 @@ const Voting = () => {
         }
 
         try {
-            await axios.put("http://localhost:4000/voter/voting", {
+            await axios.put("https://onevote-backend.onrender.com/voter/voting", {
                 voteTo: name
             }, {
                 headers: {

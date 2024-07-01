@@ -27,12 +27,12 @@ const Landing = () => {
         try {
             let response;
             if (user === "voter") {
-                response = await axios.post("http://localhost:4000/voter/signin", {
+                response = await axios.post("https://onevote-backend.onrender.com/voter/signin", {
                     email,
                     password
                 });
             } else {
-                response = await axios.post("http://localhost:4000/admin/signin", {
+                response = await axios.post("https://onevote-backend.onrender.com/admin/signin", {
                     email,
                     password
                 });

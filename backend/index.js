@@ -7,4 +7,4 @@ const voterRoute=require("./routes/voter")
 const adminRoute=require("./routes/admin")
 app.use("/voter",voterRoute);
 app.use("/admin",adminRoute);
-app.listen(4000)
+app.listen(process.env.PORT)

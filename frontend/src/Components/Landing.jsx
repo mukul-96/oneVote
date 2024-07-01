@@ -45,7 +45,7 @@ const Landing = () => {
                 } else {
                     navigate("/admin/manage");
                 }
-            }, 1000);
+            }, 800);
         } catch (error) {
             toast.error("Something went wrong");
             console.error("Signin error:", error);

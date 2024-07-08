@@ -1,21 +1,21 @@
-
-import './App.css'
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import './App.css';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Landing from './Components/Landing';
 import Voting from './Components/Voting';
 import SignUp from './Components/SignUp';
 import AdminPanel from './Components/AdminPanel';
+
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-      <Route path="/" element={<Landing></Landing>}></Route>
-      <Route path="/voter/voting" element={<Voting></Voting>}></Route>
-      <Route path="/voter/signup" element={<SignUp></SignUp>}></Route>
-      <Route path="/admin/manage" element={<AdminPanel></AdminPanel>}></Route>
+        <Route path="/" element={<Landing />} />
+        <Route path="/voter/voting" element={<Voting />} />
+        <Route path="/voter/signup" element={<SignUp />} />
+        <Route path="/admin/manage" element={<AdminPanel />} />
       </Routes>
-    </BrowserRouter>
-  )
+    </HashRouter>
+  );
 }
 
-export default App
+export default App;

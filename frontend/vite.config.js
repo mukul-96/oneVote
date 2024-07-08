@@ -5,3 +5,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 })
+// [[redirects]]
+//   from = "/admin/*"
+//   to = "/admin/:splat"
+//   status = 200
+//   [[redirects]]
+//   from = "/voter/*"
+//   to = "/voter/signin"
+//   status = 200

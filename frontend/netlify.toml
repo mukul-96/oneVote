@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "/*"
+  to = "index.html"
+  status = 200
+
+[[redirects]]
+ from="https://onevote-backend.onrender.com/voter/*"
+ to="https://668c41ebb43fe1a86be8c73b--spontaneous-rugelach-c6ddfc.netlify.app/"
+ status=200
+
